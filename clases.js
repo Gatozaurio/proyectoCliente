@@ -36,6 +36,8 @@ class Concierto{
     }
 }
 
+let concierto1 = new Concierto('Ofunkillo', 12, '30/11/2018', 'Sala Malandar');
+
 class Usuario{
     // Constructor
     constructor(nombreUsuario, contraseña, correo, nombreReal){
@@ -73,3 +75,5 @@ class Usuario{
         return this._nombreReal;
     }
 }
+
+let usuario1 = new Usuario('Manolo25', 'manoloermejo25', 'manolo@gmail.com', 'Manolo Meloinvento');
