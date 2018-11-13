@@ -1,9 +1,10 @@
 class Concierto{
+
     // Constructor
-    constructor(grupo, precio, fecha, ubicacion){
+    constructor(grupo, precio, date, ubicacion){
         this.grupo = grupo;
         this.precio = precio;
-        this.fecha = fecha;
+        this.date = date;
         this.ubicacion = ubicacion;
     }
 
@@ -14,8 +15,8 @@ class Concierto{
     set precio(precio){
         this._precio = precio;
     }
-    set concierto(fecha){
-        this._fecha = fecha;
+    set concierto(date){
+        this._date = date;
     }
     set concierto(ubicacion){
         this._ubicacion = ubicacion;
@@ -28,17 +29,41 @@ class Concierto{
     get precio(){
         return this._precio;
     }
-    get fecha(){
-        return this._fecha;
+    get Date(){
+        return this._Date;
     }
     get ubicacion(){
         return this._ubicacion;
     }
 }
 
-let concierto1 = new Concierto('Ofunkillo', 12, '30/11/2018', 'Sala Malandar');
+class Grupo{
+
+    // Constructor
+    constructor(nombre){
+        this.nombre = nombre;
+        this.conciertos = [];
+    }
+
+    // Getters
+    get nombre(){
+        return this._nombre;
+    }
+    get conciertos(){
+        return this._conciertos;
+    }
+
+    // Setters
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+    set conciertos(conciertos){
+        this._conciertos = conciertos;
+    }
+}
 
 class Usuario{
+
     // Constructor
     constructor(nombreUsuario, contraseña, correo, nombreReal){
         this.nombreUsuario = nombreUsuario;
@@ -76,4 +101,34 @@ class Usuario{
     }
 }
 
-let usuario1 = new Usuario('Manolo25', 'manoloermejo25', 'manolo@gmail.com', 'Manolo Meloinvento');
+class Voto {
+
+    // Constructor
+    constructor(valor, comentario, usuario){
+        this.valor = valor;
+        this.comentario = comentario;
+        this.usuario = usuario;
+    }
+
+    // Getters
+    get valor(){
+        return this._valor;
+    }
+    get comentario(){
+        return this._comentario;
+    }
+    get usuario(){
+        return this._usuario;
+    }
+
+    // Setters
+    set valor(valor){
+        this._valor = valor;
+    }
+    set comentario(comentario){
+        this._comentario = comentario;
+    }
+    set usuario(usuario){
+        this._usuario = usuario;
+    }
+}
