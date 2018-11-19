@@ -1,3 +1,4 @@
+
 class Concierto{
 
     // Constructor
@@ -6,6 +7,7 @@ class Concierto{
         this.precio = precio;
         this.date = date;
         this.ubicacion = ubicacion;
+        this.imagen = imagen;
     }
 
     // Setters
@@ -15,11 +17,14 @@ class Concierto{
     set precio(precio){
         this._precio = precio;
     }
-    set concierto(date){
+    set date(date){
         this._date = date;
     }
-    set concierto(ubicacion){
+    set ubicacion(ubicacion){
         this._ubicacion = ubicacion;
+    }
+    set imagen(imagen){
+        this._imagen = imagen;
     }
 
     // Getters
@@ -29,11 +34,14 @@ class Concierto{
     get precio(){
         return this._precio;
     }
-    get Date(){
-        return this._Date;
+    get date(){
+        return this._date;
     }
     get ubicacion(){
         return this._ubicacion;
+    }
+    get imagen(){
+        return this.imagen;
     }
 }
 
@@ -42,7 +50,7 @@ class Grupo{
     // Constructor
     constructor(nombre){
         this.nombre = nombre;
-        this.conciertos = [];
+        this.conciertos = []; // Array de conciertos
     }
 
     // Getters
@@ -60,6 +68,10 @@ class Grupo{
     set conciertos(conciertos){
         this._conciertos = conciertos;
     }
+
+    incluirConcierto(concierto){
+        this._conciertos.push(concierto);
+    }
 }
 
 class Usuario{
@@ -70,6 +82,7 @@ class Usuario{
         this.contraseña = contraseña;
         this.correo = correo;
         this.nombreReal = nombreReal;
+        this.conciertos = [];
     }
 
     // Setters
@@ -85,6 +98,9 @@ class Usuario{
     set nombreReal(nombreReal){
         this._nombreReal = nombreReal;
     }
+    set conciertos(conciertos){
+        this._conciertos = conciertos;
+    }
 
     // Getters
     get nombreUsuario(){
@@ -99,23 +115,26 @@ class Usuario{
     get nombreReal(){
         return this._nombreReal;
     }
+    get conciertos(){
+        return this._conciertos;
+    }
+
+    añadirConcierto(concierto) {
+        this.conciertos.push(concierto);  
+    }
 }
 
 class Voto {
 
     // Constructor
-    constructor(valor, comentario, usuario){
+    constructor(valor, usuario){
         this.valor = valor;
-        this.comentario = comentario;
         this.usuario = usuario;
     }
 
     // Getters
     get valor(){
         return this._valor;
-    }
-    get comentario(){
-        return this._comentario;
     }
     get usuario(){
         return this._usuario;
@@ -130,5 +149,29 @@ class Voto {
     }
     set usuario(usuario){
         this._usuario = usuario;
+    }
+}
+
+class Etiqueta {
+    // Constructor
+    constructor(nombre){
+        this.nombre = nombre;
+        this.votos = []; // Array de votos
+    }
+
+    // Getters
+    get nombre(){
+        return this._nombre;
+    }
+    get votos(){
+        return this._votos;
+    }
+
+    // Setters
+    set nombre(nombre){
+        this._nombre = nombre;
+    }
+    set conciertos(){
+        this.conciertos = conciertos;
     }
 }

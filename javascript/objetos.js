@@ -1,9 +1,18 @@
+let listaConciertos = [];
+
+let grupoOfunkillo = new Grupo ('Ofunkillo')
+grupoOfunkillo
 
 let conciertoOfunkillo01 = new Concierto(grupoOfunkillo, 12, new Date(2018,12,20), 'Sala Malandar');
 
 let conciertoOfunkillo02 = new Concierto(grupoOfunkillo, 12, new Date(2019,1,16), 'Sala Malandar');
 
-let grupoOfunkillo = new Grupo ('Ofunkillo')
+grupoOfunkillo.incluirConcierto(conciertoOfunkillo01);
+grupoOfunkillo.incluirConcierto(conciertoOfunkillo02);
+
+listaConciertos.push(conciertoOfunkillo01);
+listaConciertos.push(conciertoOfunkillo02);
+
 
 let usuario01 = new Usuario('Manolo25', 'manoloermejo25', 'manolo@gmail.com', 'Manolo Meloinvento');
 
